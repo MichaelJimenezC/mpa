@@ -451,11 +451,10 @@
     <!-- Newsletter End -->
  <table>
       <tbody>
-          @for (datum of data; track datum.artist(s)_name) {
+          @for (datum of data; track datum.track_name) {
             <tr>
-                <th> {{  datum[artist(s)_name ]  }}  </th>
-              <td> {{  datum[ released_year ]  }}  </td>
-              <td> {{  datum[ track_name ]  }} </td>
+                <th> {{  datum.mode  }}  </th>              
+              <td> {{  datum.track_name  }} </td>
             </tr>
           } @empty {
             <tr>

@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  private URL: string = 'https://mapdawm.firebaseio.com/collection.json';
+  private URL: string = 'https://mpadawm.firebaseio.com/collection.json';
 
   constructor(private http:HttpClient) { 
 
