@@ -42,6 +42,7 @@
           uses: crazy-max/ghaction-github-pages@v3.1.0
           with:
             build_dir: dist/cliente-angular/browser
+            
           env:
             GITHUB_TOKEN:  ${{secrets.GITHUB_TOKEN}} 
             
