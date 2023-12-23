@@ -31,6 +31,6 @@ export class DatosComponent {
       item.track_name.toLowerCase().includes(this.searchText.toLowerCase()) ||
       item['artist(s)_name'].toLowerCase().includes(this.searchText.toLowerCase())
       // ... agrega más condiciones según sea necesario ...
-    ).slice(0, 100);
+    ).slice(0, 10);
   }
 }

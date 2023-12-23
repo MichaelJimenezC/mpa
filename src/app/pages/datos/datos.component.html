@@ -1,26 +1,55 @@
-<input type="text" [(ngModel)]="searchText" (ngModelChange)="applyFilter()" placeholder="Buscar..." />
+<div class="container-fluid bg-primary hero-header">
+  <div class="container text-center">
+    <h1 class="display-4 text-white mb-3 animated slideInDown">Datos</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
+        <li class="breadcrumb-item"><a class="text-white" href="#">Inicio</a></li>
+        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Sobre nosotros</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<div class="container-fluid py-5">
+  <div class="container">
+      <div class="row g-5 align-items-center">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <img class="img-fluid animated pulse infinite" src="assets/img/rock.gif">
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <h1 class="text-primary mb-4">Nuestra Pasión, Tu Música: Descubre SonicFusion</h1>
+              <p class="mb-4">¡Descubre la magia de nuestra tabla interactiva de datos musicales! Navega a través de un océano de información detallada sobre tus canciones favoritas, desde el nombre de la pista hasta el porcentaje de energía. ¿Buscas algo específico? Utiliza nuestra barra de búsqueda para encontrar instantáneamente las joyas musicales que capturan tu interés. Con un diseño elegante y una interfaz fácil de usar, explorar la música nunca ha sido tan sencillo y atractivo. Sumérgete en las tendencias, personaliza tus preferencias y desentraña los secretos detrás de cada nota. ¡Bienvenido a una experiencia única donde la música y los datos se fusionan en armonía! </p>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="tabla" class="container-fluid p-4">
+  <input type="text" class="form-control mb-3" [(ngModel)]="searchText" (ngModelChange)="applyFilter()" placeholder="Buscar..." />
 
-<table>
-  <thead>
-    <tr>
-      <th>Track Name</th>
-      <th>Artist(s)</th>
-      <th>Streams</th>
-      <th>BPM</th>
-      <th>Danceability (%)</th>
-      <th>Energy (%)</th>
-      <!-- Agrega más encabezados según sea necesario -->
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let datum of data">
-      <td>{{ datum.track_name }}</td>
-      <td>{{ datum['artist(s)_name'] }}</td>
-      <td>{{ datum.streams }}</td>
-      <td>{{ datum.bpm }}</td>
-      <td>{{ datum['danceability_%'] }}</td>
-      <td>{{ datum['energy_%'] }}</td>
-      <!-- Agrega más celdas según sea necesario -->
-    </tr>
-  </tbody>
-</table>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Track Name</th>
+          <th>Artist(s)</th>
+          <th>Streams</th>
+          <th>BPM</th>
+          <th>Danceability (%)</th>
+          <th>Energy (%)</th>
+          <!-- Agrega más encabezados según sea necesario -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let datum of data">
+          <td>{{ datum.track_name }}</td>
+          <td>{{ datum['artist(s)_name'] }}</td>
+          <td>{{ datum.streams }}</td>
+          <td>{{ datum.bpm }}</td>
+          <td>{{ datum['danceability_%'] }}</td>
+          <td>{{ datum['energy_%'] }}</td>
+          <!-- Agrega más celdas según sea necesario -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
