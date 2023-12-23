@@ -32,7 +32,7 @@ img.animated.pulse {
 }
 
 .btn.btn-primary {
-    color: var(--bs-white);
+
 }
 
 .btn-square {
@@ -250,7 +250,7 @@ img.animated.pulse {
 
 .product-item:hover a.btn {
     color: var(--bs-white);
-    background: var(--bs-primary);
+    background: #01c7bd;
 }
 
 
