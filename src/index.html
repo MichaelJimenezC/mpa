@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>ClienteAngular</title>
-  <base href="/mpa/browser">
+  <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -41,5 +41,11 @@
 
     <!-- Template Javascript -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('inicioLink').click();
+      });
+    </script>
+    
 </body>
 </html>
